@@ -1,0 +1,26 @@
+api:
+  base_url: "https://api.ticktick.com"
+  client_id: ""  # Set via environment variable TICKTICK_CLIENT_ID
+  client_secret: ""  # Set via environment variable TICKTICK_CLIENT_SECRET
+  redirect_uri: "http://localhost:8080/callback"
+
+defaults:
+  project: "inbox"
+  priority: 0
+  reminder: "9:00"
+
+obsidian:
+  vault_path: "~/Documents/ObsidianVault"
+  daily_notes_path: "Daily Notes"
+  task_log_template: "templates/task-log.md"
+
+workflows:
+  daily_plan:
+    include_overdue: true
+    include_today: true
+    include_tomorrow: false
+    
+formatting:
+  date_format: "%Y-%m-%d"
+  time_format: "%H:%M"
+  timezone: "America/Los_Angeles"

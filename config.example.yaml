@@ -1,0 +1,30 @@
+# TickTask Configuration Example
+# Copy this file to ~/.ticktask/config.yaml and fill in your credentials
+
+api:
+  # Get these from https://developer.ticktick.com/manage
+  client_id: "YOUR_CLIENT_ID_HERE"
+  client_secret: "YOUR_CLIENT_SECRET_HERE"
+  redirect_uri: "http://localhost:8080/callback"
+
+defaults:
+  project: "inbox"
+  priority: 0
+  reminder: "9:00"
+
+obsidian:
+  # Path to your Obsidian vault
+  vault_path: "~/Documents/ObsidianVault"
+  daily_notes_path: "Daily Notes"
+  task_log_template: "templates/task-log.md"
+
+workflows:
+  daily_plan:
+    include_overdue: true
+    include_today: true
+    include_tomorrow: false
+    
+formatting:
+  date_format: "%Y-%m-%d"
+  time_format: "%H:%M"
+  timezone: "America/Los_Angeles"
